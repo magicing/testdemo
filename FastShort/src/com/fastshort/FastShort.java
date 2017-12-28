@@ -30,7 +30,7 @@ public class FastShort {
 	public static void sort(int[] a, int low, int high) {
 		int start = low;
 		int end = high;
-		int key = a[low];
+		int key = a[low];//key等于数组的第一个元素
 		
 		
 		while(end > start) {
@@ -54,12 +54,8 @@ public class FastShort {
 				//此时第一次循环比较结束，关键值的位置已经确定了。左边的值都是比关键值小，右边的值都是比关键值大，但是两边的顺序还有可能是不一样的，进行下面的递归调用
 		}
 		//递归
-		if(start > low) {
-			sort(a, low, start-1);//左边序列。第一个索引位置到关键值索引-1	
-		}
-		if(end < high) {
-			sort(a, end+1, high); //右边序列。从关键值索引+1到最后一个
-		} 
+		if(start > low)	sort(a, low, start-1);//左边序列。第一个索引位置到关键值索引-1	
+		if(end < high) sort(a, end+1, high); //右边序列。从关键值索引+1到最后一个
 	}
 
 }
