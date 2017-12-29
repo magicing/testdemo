@@ -14,6 +14,7 @@ import net.sf.json.JSONObject;
 /**
  * 
  * @GetAreaByIp 根据ip获取地址
+ * http://ip.taobao.com/instructions.phps
  *
  * @date 2017年12月29日
  *
